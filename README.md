@@ -50,7 +50,7 @@ Production-grade semantic segmentation pipeline for Earth Observation imagery us
 
 ### Installation
 ```bash
-git clone https://github.com/YOURUSERNAME/eo_ai_landcover_classification.git
+git clone https://github.com/IvanAlKhayat/eo_ai_landcover_classification.git
 cd eo_ai_landcover_classification
 pip install -r requirements.txt
 ```
