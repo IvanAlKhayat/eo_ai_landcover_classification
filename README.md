@@ -76,6 +76,7 @@ and check produced logs.
 ```bash
 python evaluate.py --model checkpoints/best_model.pth
 ```
+be aware that such model will be generated in local, along with several checkpoints!
 
 ### Inference
 ```bash
