@@ -50,7 +50,6 @@ evaluation/
 runs/
 logs/
 checkpoints/
-*.png
 *.jpg
 *.jpeg
 
