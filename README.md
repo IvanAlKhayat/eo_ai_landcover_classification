@@ -66,8 +66,11 @@ python data/download_bigearthnet_subset.py --num_samples 2000
 python train.py --data_path ./data/bigearthnet_subset --epochs 100 --batch_size 32 --amp
 
 # HPC (Slurm)
+sbatch setup.sh
 sbatch slurm_train.sh
 ```
+and check produced logs.
+
 
 ### Evaluate
 ```bash
