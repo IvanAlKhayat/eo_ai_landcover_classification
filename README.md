@@ -29,11 +29,13 @@ Production-grade semantic segmentation pipeline for Earth Observation imagery us
 | Model Size (compressed) | 10.4 MB | ✅ 3.1x reduction |
 | Parameters | 17.26M | ✅ Compact |
 
-*Tested on A100 GPU (training) and Intel i7 CPU (inference)*
+ Mean Intersection over Union (mIoU) ref https://lightning.ai/docs/torchmetrics/stable/segmentation/mean_iou.html
+
+*Tested on NVIDIA A100 GPU (training) and Intel i7 CPU (inference)*
 
 ---
 
-## 🖼️ Results
+## Obtained Results
 
 <p align="center">
   <img src="assets/confusion_matrix.png" width="48%">
@@ -167,14 +169,9 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 ---
 
-## 📧 Contact
 
 **Ivan Al Khayat**  
-MSc AI/HPC Student  
-
-📧 your.email@example.com  
-💼 [LinkedIn](https://linkedin.com/in/YOURPROFILE)  
-🐙 [GitHub](https://github.com/YOURUSERNAME)
+AI BS.c. HPC Ms.c.   
 
 ---
 
