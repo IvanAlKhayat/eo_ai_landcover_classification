@@ -31,8 +31,7 @@ ENV/
 .ipynb_checkpoints
 *.ipynb_checkpoints/
 
-# PyTorch
-*.pth
+# PyTorch #*.pth
 *.pt
 *.ckpt
 
