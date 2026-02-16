@@ -1,0 +1,95 @@
+### Starting TaskPrologue of job 3345774 on a0905 at Mon Feb 16 21:53:09 CET 2026
+Running on cores 80-95 with governor ondemand
+Mon Feb 16 21:53:09 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 590.48.01              Driver Version: 590.48.01      CUDA Version: 13.1     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-40GB          On  |   00000000:96:00.0 Off |                    0 |
+| N/A   37C    P0             59W /  400W |       0MiB /  40960MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+### Finished TaskPrologue
+
+==========================================
+Job ID: 3345774
+Job Name: eo-ai-train
+Node: a0905
+GPUs: 1
+CPUs per task: 8
+==========================================
+Python: /home/hpc/hpcv/hpcv168v/eo/EO-AI-Portfolio/venv/bin/python
+PyTorch version: 2.10.0+cu128
+CUDA available: True
+CUDA devices: 1
+Detected 1 GPU(s)
+-rw-r--r-- 1 hpcv168v hpcv 198M Feb 16 21:36 checkpoints/best_model.pth
+✅ Created U-Net with 17,264,138 parameters (17.26M)
+✅ Model loaded from: checkpoints/best_model.pth
+📊 Loaded 700 train samples
+📊 Loaded 165 val samples
+📊 Loaded 165 test samples
+🔍 Running evaluation...
+📊 Confusion matrix saved to: evaluation/confusion_matrix.png
+📊 Per-class metrics plot saved to: evaluation/per_class_metrics.png
+
+======================================================================
+LAND COVER CLASSIFICATION EVALUATION REPORT
+======================================================================
+
+OVERALL METRICS:
+  Mean IoU (mIoU):        0.9135
+  Overall Accuracy:       0.9454
+  Avg Inference Time:     217.29 ms
+  FPS:                    4.60
+
+PER-CLASS METRICS:
+Class                     IoU  Precision   Recall       F1
+----------------------------------------------------------------------
+Urban                  0.9654     0.9709   0.9942   0.9824
+Industrial             0.9612     0.9948   0.9660   0.9802
+Arable                 0.7075     0.7126   0.9899   0.8287
+Crops                  0.8495     0.9851   0.8606   0.9186
+Pastures               0.8392     0.9899   0.8465   0.9126
+Complex                0.8300     0.9852   0.8405   0.9071
+Forests                0.9987     0.9991   0.9996   0.9994
+Herbaceous             0.9890     0.9950   0.9940   0.9945
+Bare                   0.9947     0.9973   0.9974   0.9974
+Water                  0.9997     0.9999   0.9997   0.9998
+======================================================================
+
+📄 Report saved to: evaluation/evaluation_report.txt
+=== JOB_STATISTICS ===
+=== current date     : Mon Feb 16 21:53:33 CET 2026
+= Job-ID             : 3345774 on alex
+= Job-Name           : eo-ai-train
+= Job-Command        : /home/hpc/hpcv/hpcv168v/eo/EO-AI-Portfolio/diagnose.sh
+= Initial workdir    : /home/hpc/hpcv/hpcv168v/eo/EO-AI-Portfolio
+= Queue/Partition    : a100
+= Slurm account      : hpcv with QOS=normal
+= Features           : a100_40
+= Requested resources:  for 01:00:00
+= Elapsed runtime    : 00:00:25
+= Total RAM usage    : 3.5 GiB of assigned  GiB (%)
+= Node list          : a0905
+= Subm/Elig/Start/End: 2026-02-16T21:52:28 / 2026-02-16T21:52:28 / 2026-02-16T21:53:08 / 2026-02-16T21:53:33
+======================
+=== Quota infos ======
+    Path              Used     SoftQ    HardQ    Gracetime  Filec    FileQ    FiHaQ    FileGrace    
+    /home/woody          0.0K  1000.0G  1500.0G        N/A       1    5,000K   7,500K        N/A    
+    /lustre              4.0K     0.0K     0.0K        N/A       1       80K     250K        N/A    
+======================
+=== GPU utilization ==
+gpu_name, gpu_bus_id, pid, gpu_utilization [%], mem_utilization [%], max_memory_usage [MiB], time [ms]
+NVIDIA A100-SXM4-40GB, 00000000:96:00.0, 1936690, 4 %, 2 %, 3382 MiB, 8204 ms

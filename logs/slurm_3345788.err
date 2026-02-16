@@ -1,0 +1,6 @@
+/var/tmp/slurmd_spool/job3345788/slurm_script: line 29: module: command not found
+/home/hpc/hpcv/hpcv168v/eo/EO-AI-Portfolio/venv/lib/python3.12/site-packages/albumentations/core/validation.py:114: UserWarning: ShiftScaleRotate is a special case of Affine transform. Please use Affine transform instead.
+  original_init(self, **validated_kwargs)
+/home/hpc/hpcv/hpcv168v/eo/EO-AI-Portfolio/data/preprocess.py:77: UserWarning: Argument(s) 'var_limit' are not valid for transform GaussNoise
+  A.GaussNoise(var_limit=(0.001, 0.01), p=1.0),
+  0%|          | 0/11 [00:00<?, ?it/s]  9%|▉         | 1/11 [00:01<00:11,  1.14s/it] 36%|███▋      | 4/11 [00:01<00:01,  4.03it/s] 64%|██████▎   | 7/11 [00:01<00:00,  7.34it/s] 91%|█████████ | 10/11 [00:01<00:00, 10.83it/s]100%|██████████| 11/11 [00:01<00:00,  7.19it/s]

@@ -68,9 +68,7 @@ checkpoints/
 # Tensorboard
 events.out.tfevents.*
 
-# Slurm
-slurm-*.out
-slurm-*.err
+# Slurm slurm-*.out slurm-*.err
 
 # Environment
 .env
