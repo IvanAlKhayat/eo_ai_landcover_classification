@@ -5,15 +5,15 @@
 [![Inference](https://img.shields.io/badge/Inference-43ms-orange)](.)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-Production-grade semantic segmentation pipeline for Earth Observation imagery using U-Net. Achieves 94.5% mIoU with real-time CPU inference.
+Semantic segmentation pipeline for Earth Observation imagery using U-Net. Achieves 94.5% mIoU with real-time CPU inference.
 
 ---
 
 ## 🎯 Highlights
 
-- **94.5% mIoU** - State-of-the-art accuracy on 10-class land cover
+- **94.5% mIoU** - State-of-the-art accuracy on 10-class land cover, based on Voronoi Images
 - **43ms inference** - Real-time on CPU (23 FPS)
-- **3.1x compression** - INT8 quantization (31MB → 10MB)
+- **3.1x compression** - INT8 quantization (30MB → 10MB)
 - **HPC-ready** - Multi-GPU training with Slurm
 - **Production deployment** - Docker + FastAPI
 
